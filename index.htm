@@ -52,7 +52,7 @@
           <div class="mobile-menu-backdrop"></div>
           <div class="mobile-menu">
             <span class="mobile-menu__close">
-              <img src="./image/close-mobile-menu.svg" alt="" />
+              <img src="./image/close-mobile-menu.svg" alt="close mibile menu" />
             </span>
             <ul class="mobile-menu__list">
               <li class="mobile-menu__item"><a class="mobile-menu__link link" href="#!">Чему вы научитесь</a></li>
@@ -74,28 +74,7 @@
         </div>
       </div>
     </header>
-    <script>
-      const hamburger = document.querySelector(".burger-button");
-      const navMenu = document.querySelector(".mobile-menu");
-      const close = document.querySelector(".close");
-      const backdrop = document.querySelector(".mobile-menu-backdrop");
-      hamburger.addEventListener("click", mobileMenu);
-
-      function mobileMenu() {
-        navMenu.classList.toggle("open-mobile-menu");
-        backdrop.style.display = "block";
-      }
-
-      close.addEventListener("click", closeMobileMenu);
-
-      function closeMobileMenu() {
-        if (navMenu.classList.contains("open-mobile-menu")) {
-          navMenu.classList.remove("open-mobile-menu");
-          backdrop.style.display = "none";
-        }
-      }
-    </script>
-    <main>
+     <main>
       <section class="start-block">
         <div class="wrapper">
           <div class="hero">
@@ -536,5 +515,26 @@
         </div>
       </div>
     </footer>
+    <script>
+      const hamburger = document.querySelector(".burger-button");
+      const navMenu = document.querySelector(".mobile-menu");
+      const closeMenu = document.querySelector(".mobile-menu__close");
+      const backdrop = document.querySelector(".mobile-menu-backdrop");
+      hamburger.addEventListener("click", mobileMenu);
+
+      function mobileMenu() {
+        navMenu.classList.toggle("open-mobile-menu");
+        backdrop.style.display = "block";
+      }
+
+      closeMenu.addEventListener("click", closeMobileMenu);
+
+      function closeMobileMenu() {
+        if (navMenu.classList.contains("open-mobile-menu")) {
+          navMenu.classList.remove("open-mobile-menu");
+          backdrop.style.display = "none";
+        }
+      }
+    </script>
   </body>
 </html>
