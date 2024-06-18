@@ -22,7 +22,17 @@
  // }
 //}
 
+@mixin hover-effect-media($color, $property) {
+  @media (hover: hover) {
+    &:hover {
+      #{ $property }: $color;
+    }
+  }
+}
 
+//.button {
+//@include hover-effect-media(var(--color-light-blue), background-color);
+//}
 
 
 

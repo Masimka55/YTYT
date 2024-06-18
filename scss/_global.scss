@@ -33,9 +33,9 @@ margin-bottom: 35px;
     max-width: 321px;
     width:100%;
    @include transition(background-color, 0.3s, ease-in);
-    &:hover{
-      background-color: var(--color-light-blue);
-    }
+   @media (hover: hover) {
+    @include hover-effect-media(var(--color-light-blue), background-color);
+  }
 
  
     svg{
@@ -53,9 +53,7 @@ margin-bottom: 35px;
   .link {
     color: var(--color-dark);
     @include transition(color, 0.4s, ease);
-    &:hover {
-      color: var(--color-orange);
-    }
+    @include hover-effect-media(var(--color-orange),color);
   }
 
   .visually-hidden {

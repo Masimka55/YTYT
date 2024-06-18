@@ -62,9 +62,7 @@
     border-radius: 34px;
     padding: 9px 15px;
     @include transition(background-color, 0.3s, ease-in);
-    &:hover {
-      background-color: var(--color-orange);
-    }
+    @include hover-effect-media(var(--color-orange), background-color);
   }
 
   &__login-button {

@@ -47,10 +47,12 @@ footer{
   gap: 16px;
 
   &__icon {
+    @media (hover: hover){
     &:hover path:first-child {
       fill: #f15525;
       @include transition(fill, 0.3s, ease);
     }
+  }
   }
 }
 

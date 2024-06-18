@@ -147,8 +147,10 @@ body {
   width: 100%;
   transition: background-color 0.3s ease-in;
 }
-.button-link:hover {
-  background-color: var(--color-light-blue);
+@media (hover: hover) and (hover: hover) {
+  .button-link:hover {
+    background-color: var(--color-light-blue);
+  }
 }
 .button-link svg {
   margin-left: 12px;
@@ -168,8 +170,10 @@ body {
   color: var(--color-dark);
   transition: color 0.4s ease;
 }
-.link:hover {
-  color: var(--color-orange);
+@media (hover: hover) {
+  .link:hover {
+    color: var(--color-orange);
+  }
 }
 
 .visually-hidden {
@@ -259,8 +263,10 @@ body {
   padding: 9px 15px;
   transition: background-color 0.3s ease-in;
 }
-.header__auth-item:hover {
-  background-color: var(--color-orange);
+@media (hover: hover) {
+  .header__auth-item:hover {
+    background-color: var(--color-orange);
+  }
 }
 .header__login-button {
   color: #fff;
@@ -961,9 +967,11 @@ footer {
   display: flex;
   gap: 16px;
 }
-.social-network__icon:hover path:first-child {
-  fill: #f15525;
-  transition: fill 0.3s ease;
+@media (hover: hover) {
+  .social-network__icon:hover path:first-child {
+    fill: #f15525;
+    transition: fill 0.3s ease;
+  }
 }
 
 .communication {
