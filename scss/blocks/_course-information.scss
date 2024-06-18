@@ -1,0 +1,26 @@
+.course-information{
+    display: flex;
+    background-color: #EAF2F5;
+    padding: 65px 52px;
+    border-radius: 30px;
+    align-items: center;
+gap: 35px;
+@include tablet{
+        padding: 30px;
+        gap: 20px;
+        flex-direction: column;
+}
+ 
+@include mobile{
+   
+    gap: 15px;
+    font-size: 13px;
+    padding: 20px 25px;
+}
+    &__text{
+        font-size: 17px;
+        line-height: 1.3;
+        
+    }
+
+}

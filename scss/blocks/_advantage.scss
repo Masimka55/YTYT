@@ -1,0 +1,52 @@
+.our-advantage {
+    margin-bottom: 87px;
+    @include mobile{
+      margin-bottom: 40px;
+    }
+    &__cards {
+      display: flex;
+       
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 26px;
+   
+      @include mobile-s{
+        gap:10px
+      }
+    }
+    &__card {
+      background-color: var(--color-morning-sky);
+      padding: 51px 35px 31px;
+      border-radius: 30px;
+      text-align: center;
+      width: 270px;
+      @include mobile{
+        padding: 24px 10px 20px;
+        width: 145px;
+   
+          &--big {
+            width: 100%;
+       
+    }
+    }
+    }
+  .advantage-card {
+     &__icons{
+        width: 60px;
+        height: 60px;
+        @include mobile{
+            width: 40px;
+            height: 40px;
+        }
+      }
+      &__title {
+        margin-top: 19px;
+        margin-bottom: 10px;
+        font-size: clamp(0.75rem, 0.561rem + 0.606vw, 1rem);
+      }
+      &__description {
+        font-size: clamp(0.563rem, 0.373rem + 0.606vw, 0.813rem);
+      }
+    }
+  }
+  

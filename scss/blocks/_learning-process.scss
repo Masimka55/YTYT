@@ -1,0 +1,126 @@
+.learning {
+  position: relative;
+  text-align: center;
+  padding: 60px 0;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    background-image: url(../image/explanaton.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    background-color: var(--color-morning-sky);
+    position: absolute;
+    top: -550px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    @include mobile {
+      top: 0;
+    }
+  }
+  &__info {
+    max-width: 642px;
+    margin-inline: auto;
+  }
+  &__parag {
+    width: 100%;
+    margin-bottom: 28px;
+    @include mobile {
+      font-size: 13px;
+      margin-bottom: 33px;
+    }
+  }
+  &__video {
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 40px;
+    width: 100%;
+  }
+}
+
+.learning-process {
+  margin-bottom: 20px;
+  &__list {
+    width: 100%;
+    padding: 30px 53px;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 50px;
+    background-color: #fff;
+    border-radius: 40px;
+    box-shadow: 0 81px 120px -77px rgba(34, 37, 59, 0.04);
+    @include mobile {
+      flex-direction: column;
+      row-gap: 20px;
+    }
+  }
+  &__item {
+    padding-right: 60px;
+    text-align: left;
+    flex: 1;
+    @include mobile {
+      padding-right: 0;
+      padding-bottom: 20px;
+    }
+    &:not(:last-child) {
+      border-right: 1px solid var(--color-morning-sky);
+
+      @include mobile {
+        border-right: none;
+        border-bottom: 1px solid var(--color-morning-sky);
+      }
+    }
+  }
+
+  &__number {
+    font-weight: 700;
+    font-size: 77px;
+    line-height: 0.65;
+    margin-bottom: 20px;
+    color:var(--color-light-blue);
+    display: inline-block;
+    @include mobile {
+      font-size: 50px;
+    }
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  @include mobile {
+    &__title {
+      font-size: 20px;
+    }
+    &__text {
+      font-size: 13px;
+    }
+  }
+}
+.block-testing {
+  display: flex;
+  align-items: center;
+  border-radius: 110px;
+  background-color: #fff;
+  padding: 12px 14px;
+  max-width: 540px;
+  gap: 24px;
+  margin-bottom: 70px;
+  margin-inline: auto;
+
+  @include mobile {
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    margin-bottom: 35px;
+  }
+  &__text {
+    padding-top: 12px;
+    padding-right: 10px;
+  }
+}

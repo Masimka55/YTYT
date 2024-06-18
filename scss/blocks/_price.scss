@@ -1,0 +1,133 @@
+.price-background{
+  background-color:#F9F8FD;
+  padding-bottom: 60px;
+}
+.tuition-fees{
+  margin-bottom: 41px;
+}
+.info-price{
+  overflow-x: hidden;
+  @include mobile-s{
+    scroll-snap-type: x mandatory;
+        overflow-x: scroll;
+  }
+}
+.price{
+margin-bottom: 60px;
+    &__list{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 6%;
+     
+        @include mobile{
+              grid-template-columns:  1fr;
+        }
+    }
+    &__item{
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      @include tablet{
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+      }
+    }
+    &__description{
+        max-width: 80%;
+        @include mobile{
+            font-size: 12px;
+        line-height: 17px;
+        text-align: center;
+        }
+    }
+
+
+  &__table {
+    width: 100%;
+    padding: 38px 42px;
+    background-color: #fff;
+    border-radius: 30px;
+    @include mobile{
+      padding: 20px 10px;
+    }
+  }
+  &__body {
+    margin-bottom: 20px;
+  }
+
+  &-headers {
+    text-align: left;
+    border-radius: 10px;
+    color: #38bff2;
+   
+  }
+  &__row {
+    display: flex;
+    padding: 15px 19px;
+    justify-content: flex-start;
+    flex-flow: row nowrap;
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+    @include mobile{
+     padding: 10px 5px;
+     
+    }
+  }
+  &__cell{
+    @include mobile{
+      font-size: 13px;
+    }
+  }
+}
+
+.table__row {
+  font-size: 20px;
+
+  &:nth-child(odd) {
+    background-color: #F3F3F3;
+  }
+}
+.table__total {
+  font-size: 24px;
+  font-weight:700;
+}
+
+.table__text {
+  width: 50%;
+  @include mobile-s{
+    width: 200px;
+  }
+}
+
+.table__info {
+  flex:1;
+  @include mobile-s{
+    width: 150px;
+  }
+}
+
+.swipe-table{
+ display: none;
+ 
+  @include mobile-s{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-top: 20px;
+    margin-left: 30px;
+  }
+  & svg{
+    animation: swipe-animation-table 1s ease-in-out infinite;
+  }
+ }
+ @keyframes swipe-animation-table {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+}

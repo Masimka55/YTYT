@@ -1,0 +1,73 @@
+html {
+  scroll-behavior: smooth;
+}
+body{
+    font-family: var(--font-family-base);
+    font-weight: 400;
+    color: var(--color-dark);
+    
+}
+.wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.title{
+    font-weight: 600;
+  font-size: 46px;
+  font-size: clamp(1.5rem, 0.529rem + 3.235vw, 2.875rem);
+margin-bottom: 35px;
+  text-align: center;
+  color: currentColor;
+  }
+
+  .button-link{
+    display: inline-block;
+    color: var(--color-white);
+    font-size: 20px;
+    text-align: center;
+    display: inline-block;
+    padding: 28px 5px;
+    background: var(--color-orange);
+    border-radius: 87px;
+    max-width: 321px;
+    width:100%;
+   @include transition(background-color, 0.3s, ease-in);
+    &:hover{
+      background-color: var(--color-light-blue);
+    }
+
+ 
+    svg{
+        margin-left: 12px;
+    }
+    @include mobile{
+        max-width: 299px;
+    }
+
+  }
+  .button-link--second {
+    padding: 26px 30px;
+    font-size: 16px;
+  }
+  .link {
+    color: var(--color-dark);
+    @include transition(color, 0.4s, ease);
+    &:hover {
+      color: var(--color-orange);
+    }
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+ 

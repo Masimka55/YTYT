@@ -1,0 +1,28 @@
+@mixin transition($property, $duration, $timing-function) {
+    transition: $property $duration $timing-function;
+}
+
+@mixin images($width, $padding-top) {
+    width: $width;
+    padding-top: $padding-top;
+    position: relative;
+  
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+  //.parent-class {
+  //&__block-img {
+   // @include images(35.1%, 30.34%);
+ // }
+//}
+
+
+
+
+

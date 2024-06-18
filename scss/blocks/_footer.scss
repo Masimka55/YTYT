@@ -1,0 +1,126 @@
+footer{
+  background-color: #F9F8FD;
+}
+.footer-content {
+  display: grid;
+  grid-template-columns: 50% 25% 25%;
+
+  margin-bottom: 47px;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: 43px;
+    text-align: center;
+  }
+  &__social-info {
+    display: flex;
+    flex-direction: column;
+
+    @include mobile {
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+.footer {
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #8e8e8e;
+    margin-bottom: 40px;
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  &__navigation {
+    padding: 5px 20px;
+    font-size: 13px;
+  }
+}
+
+.social-network {
+  display: flex;
+  gap: 16px;
+
+  &__icon {
+    &:hover path:first-child {
+      fill: #f15525;
+      @include transition(fill, 0.3s, ease);
+    }
+  }
+}
+
+.communication {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
+  &__link {
+    padding: 5px;
+    &--phone {
+      color: #38bff2;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 3px;
+        left: 50%;
+        width: 0;
+        height: 1px;
+        background-color: #38bff2;
+        transition: width 0.3s, left 0.3s;
+      }
+      &:hover::after {
+        left: 0;
+        width: 100%;
+        transition: width 0.3s, left 0.3s;
+      }
+    }
+  }
+
+  &__info p {
+    margin-bottom: 10px;
+    font-size: 13px;
+    color: #8e8e8e;
+  }
+}
+.text-link-footer {
+  text-align: right;
+  margin-right: 40px;
+  @include mobile {
+    text-align: center;
+    margin-right: 0;
+  }
+}
+
+.copyright {
+  border-top: 1px solid #d8d8d8;
+  color: #8E8E8E;
+  padding-top: 28px;
+  display: flex;
+  justify-content: space-between;
+  @include mobile{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+  &__info {
+    display: flex;
+    column-gap: 64px;
+    @include mobile{
+        flex-direction: column;
+        gap: 10px;
+      }
+  }
+  &__link {
+    color: currentColor;
+    &:hover{
+        color: #000;
+    }
+  }
+}

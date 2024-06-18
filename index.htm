@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <title>YTYT</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="wrapper">
+        <div class="header__inner">
+          <a class="header__block-logo" href="#">
+            <img src="./image/logo.png" alt="YTYT" width="53" height="20" />
+          </a>
+
+          <nav class="header__menu hidden-mobile">
+            <ul class="header__menu-list">
+              <li class="header__menu-item"><a class="header__menu-link link" href="#!">Чему вы научитесь</a></li>
+              <li class="header__menu-item"><a class="header__menu-link link" href="#!">Процесс обучения</a></li>
+              <li class="header__menu-item"><a class="header__menu-link link" href="#!">Стоимость</a></li>
+              <li class="header__menu-item"><a class="header__menu-link link" href="#!">Контакты</a></li>
+            </ul>
+          </nav>
+
+          <div class="header__auth-buttons">
+            <ul class="header__auth-list">
+              <li class="hiden">
+                <a class="header__register-button hidden-mobile" href="#!">Регистрация</a>
+              </li>
+
+              <li class="header__auth-item">
+                <a class="header__login-button" href="#!">
+                  <svg width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.77588 0.429688L8.71157 4.36551L4.77588 8.30132" stroke="white" />
+                    <path d="M8.73218 4.36731H0.151367" stroke="white" />
+                  </svg>
+                  Войти</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <button class="burger-button visible-mobile" type="button">
+            <span class="burger-button__line"></span>
+            <span class="burger-button__line"></span>
+            <span class="burger-button__line"></span>
+          </button>
+
+          <div class="mobile-menu-backdrop"></div>
+          <div class="mobile-menu">
+            <span class="mobile-menu__close">
+              <img src="./image/close-mobile-menu.svg" alt="" />
+            </span>
+            <ul class="mobile-menu__list">
+              <li class="mobile-menu__item"><a class="mobile-menu__link link" href="#!">Чему вы научитесь</a></li>
+              <li class="mobile-menu__item"><a class="mobile-menu__link link" href="#!">Процесс обучения</a></li>
+              <li class="mobile-menu__item"><a class="mobile-menu__link link" href="#!">Стоимость</a></li>
+              <li class="mobile-menu__item"><a class="mobile-menu__link link" href="#!">Контакты</a></li>
+              <li class="mobile-menu__item"><a class="mobile-menu__link link" href="#!">Регистрация</a></li>
+            </ul>
+
+            <button class="header__auth-item mobile-menu__link--width">
+              <a class="header__login-button" href="#!">
+                <svg width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.77588 0.429688L8.71157 4.36551L4.77588 8.30132" stroke="white" />
+                  <path d="M8.73218 4.36731H0.151367" stroke="white" />
+                </svg>
+                Войти</a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <script>
+      const hamburger = document.querySelector(".burger-button");
+      const navMenu = document.querySelector(".mobile-menu");
+      const close = document.querySelector(".close");
+      const backdrop = document.querySelector(".mobile-menu-backdrop");
+      hamburger.addEventListener("click", mobileMenu);
+
+      function mobileMenu() {
+        navMenu.classList.toggle("open-mobile-menu");
+        backdrop.style.display = "block";
+      }
+
+      close.addEventListener("click", closeMobileMenu);
+
+      function closeMobileMenu() {
+        if (navMenu.classList.contains("open-mobile-menu")) {
+          navMenu.classList.remove("open-mobile-menu");
+          backdrop.style.display = "none";
+        }
+      }
+    </script>
+    <main>
+      <section class="start-block">
+        <div class="wrapper">
+          <div class="hero">
+            <div class="hero__content">
+              <h1 class="hero__title title">Школа<span class="cactom">программирования</span> для тех, кому нужны реальные навыки, а&nbsp;не&nbsp;просто сертификат</h1>
+              <hr class="line" />
+              <p class="hero__text">Пройдите тестирование, чтобы получить доступ к&nbsp;бесплатным вводным урокам</p>
+              <a class="hero__link button-link" href="#!"
+                >Пройти тестирование
+                <svg width="15" height="15" viewBox="0 0 15 15" fill="red" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M0.292893 13.2929C-0.0976311 13.6834 -0.0976311 14.3166 0.292893 14.7071C0.683418 15.0976 1.31658 15.0976 1.70711 14.7071L0.292893 13.2929ZM15 0.999969C15 0.447684 14.5523 -3.1092e-05 14 -3.13449e-05L5 -3.05441e-05C4.44772 -3.08813e-05 4 0.447685 4 0.999969C4 1.55225 4.44772 1.99997 5 1.99997L13 1.99997L13 9.99997C13 10.5523 13.4477 11 14 11C14.5523 11 15 10.5523 15 9.99997L15 0.999969ZM1.70711 14.7071L14.7071 1.70708L13.2929 0.292862L0.292893 13.2929L1.70711 14.7071Z"
+                    fill="white" />
+                </svg>
+              </a>
+            </div>
+
+            <div class="hero__block-image">
+              <img src="./image/hero__image.png" alt="какртинка монитора и клавиатуры" width="390" height="408" />
+            </div>
+          </div>
+
+          <div class="box-down">
+            <a class="box-down__down" href="#price">
+              <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9 1C9 0.447715 8.55228 -2.41411e-08 8 0C7.44772 2.41411e-08 7 0.447715 7 1L9 1ZM7.29289 14.7071C7.68342 15.0976 8.31658 15.0976 8.70711 14.7071L15.0711 8.34315C15.4616 7.95262 15.4616 7.31946 15.0711 6.92893C14.6805 6.53841 14.0474 6.53841 13.6569 6.92893L8 12.5858L2.34315 6.92893C1.95262 6.53841 1.31946 6.53841 0.928932 6.92893C0.538408 7.31946 0.538408 7.95262 0.928933 8.34315L7.29289 14.7071ZM7 1L7 14L9 14L9 1L7 1Z"
+                  fill="#22253B" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrapper">
+          <div class="">
+            <h2 class="title">Какие технологии вы изучите:</h2>
+          </div>
+
+          <div class="technologies">
+            <div class="technologies__block-image">
+              <img class="technologies__img" src="./image/technologies__img.png" alt="" />
+            </div>
+            <div class="technologies__list">
+              <ul class="examples-block">
+                <li class="examples-block__item big" style="background-color: #5096ff">Язык программирования Python</li>
+                <li class="examples-block__item flex" style="background-color: #ffb359">Сети</li>
+                <li class="examples-block__item flex" style="background-color: #ff6f50">Базы данных</li>
+                <li class="examples-block__item big" style="background-color: #4bd071">Фреймворки Flask и Django</li>
+                <li class="examples-block__item big" style="background-color: #50c0ff">Отладка и тестирование</li>
+                <li class="examples-block__item flex" style="background-color: #4b77b9">Docker</li>
+                <li class="examples-block__item flex" style="background-color: #af93ff">Git</li>
+              </ul>
+              <p class="technologies__text">Это необходимый минимум для современного backend-разработчика</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrapper our-advantage">
+          <div class="our-advantage__block-title">
+            <h2 class="title">Обучение в YtYt – это удобно и результативно</h2>
+          </div>
+
+          <div class="our-advantage__cards">
+            <article class="our-advantage__card advantage-card">
+              <img class="advantage-card__icons" src="./image/cards1.svg" alt="" />
+              <h3 class="advantage-card__title">Огромное количество практики</h3>
+              <p class="advantage-card__description">Более 500 самостоятельных заданий и&nbsp;20&nbsp;полноценных больших проектов</p>
+            </article>
+
+            <article class="our-advantage__card advantage-card">
+              <img class="advantage-card__icons" src="./image/cards2.svg" alt="" />
+              <h3 class="advantage-card__title">Современные методики обучения</h3>
+              <p class="advantage-card__description">Спиральное обучение: погружаемся в&nbsp;материал постепенно, виток за&nbsp;витком</p>
+            </article>
+
+            <article class="our-advantage__card advantage-card">
+              <img class="advantage-card__icons" src="./image/cards3.svg" alt="" />
+              <h3 class="advantage-card__title">Простое и понятное изложение</h3>
+              <p class="advantage-card__description">Вместо заумных терминов&nbsp;&mdash; примеры из&nbsp;реального мира</p>
+            </article>
+
+            <article class="our-advantage__card advantage-card">
+              <img class="advantage-card__icons" src="./image/cards4.svg" alt="" />
+              <h3 class="advantage-card__title">Гибкий график занятий</h3>
+              <p class="advantage-card__description">Учитесь в&nbsp;любое время в&nbsp;удобном для вас темпе</p>
+            </article>
+
+            <article class="our-advantage__card advantage-card">
+              <img class="advantage-card__icons" src="./image/cards5.svg" alt="" />
+              <h3 class="advantage-card__title">Прямая связь с опытными программистами</h3>
+              <p class="advantage-card__description">Задавайте вопросы и&nbsp;отправляйте свой код на&nbsp;проверку</p>
+            </article>
+
+            <article class="our-advantage__card advantage-card">
+              <img class="advantage-card__icons" src="./image/cards6.svg" alt="" />
+              <h3 class="advantage-card__title">Оплата небольшими частями</h3>
+              <p class="advantage-card__description">Платите только за&nbsp;тот материал, который сейчас изучаете, а&nbsp;не&nbsp;за&nbsp;весь курс сразу</p>
+            </article>
+
+            <article class="our-advantage__card advantage-card our-advantage__card--big">
+              <img class="advantage-card__icons" src="./image/cards7.svg" alt="" />
+              <h3 class="advantage-card__title">Быстрый и легкий возврат</h3>
+              <p class="advantage-card__description">Если передумаете учиться &mdash; вернем деньги за&nbsp;3&nbsp;рабочих дня</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="learning">
+        <div class="wrapper">
+          <div class="">
+            <h2 class="title">Как происходит обучение на YtYt?</h2>
+          </div>
+          <div class="learning__info">
+            <p class="learning__parag">
+              Обучение должно быть комфортным. Поэтому мы&nbsp;разработали собственную платформу для обучения программированию. На&nbsp;ней вы&nbsp;можете не&nbsp;только изучать теорию,
+              но&nbsp;и&nbsp;запускать готовые примеры и&nbsp;даже писать свой собственный код.
+            </p>
+            <video class="learning__video" controls poster="./image/💻  Macbook.png">
+              <source src="путь_к_видео.mp4" type="video/mp4" />
+              Ваш браузер не поддерживает элемент <code>video</code>.
+            </video>
+          </div>
+
+          <div class="learning-process">
+            <ul class="learning-process__list">
+              <li class="learning-process__item">
+                <span class="learning-process__number">01</span>
+                <h3 class="learning-process__title">Весь материал разбит на небольшие уроки</h3>
+                <p class="learning-process__text">Теория и практика подаются маленькими порциями. Так вам будет легче усваивать новые знания.</p>
+              </li>
+              <li class="learning-process__item">
+                <span class="learning-process__number">02</span>
+                <h3 class="learning-process__title">Обучение через практику</h3>
+                <p class="learning-process__text">Всё, что вы узнали, вы тут же начинаете применять на практике. Вы сразу видите результаты своего труда.</p>
+              </li>
+              <li class="learning-process__item">
+                <span class="learning-process__number">03</span>
+                <h3 class="learning-process__title">Нет ограничений по времени</h3>
+                <p class="learning-process__text">Можно совмещать учёбу с работой и другими делами. Не нужно выпрашивать академический отпуск, если пришлось сделать перерыв.</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="block-testing">
+            <a class="button-link block-testing__link  button-link--second" href="#!">Начать обучение
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="red" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.292893 13.2929C-0.0976311 13.6834 -0.0976311 14.3166 0.292893 14.7071C0.683418 15.0976 1.31658 15.0976 1.70711 14.7071L0.292893 13.2929ZM15 0.999969C15 0.447684 14.5523 -3.1092e-05 14 -3.13449e-05L5 -3.05441e-05C4.44772 -3.08813e-05 4 0.447685 4 0.999969C4 1.55225 4.44772 1.99997 5 1.99997L13 1.99997L13 9.99997C13 10.5523 13.4477 11 14 11C14.5523 11 15 10.5523 15 9.99997L15 0.999969ZM1.70711 14.7071L14.7071 1.70708L13.2929 0.292862L0.292893 13.2929L1.70711 14.7071Z"
+                  fill="white" />
+              </svg>
+            </a>
+            <p class="block-testing__text">Попробуйте, первые уроки бесплатны, но&nbsp;нужно пройти тестирование</p>
+          </div>
+        </div>
+        <div class="help">
+          <div class="wrapper">
+            <div class="help__infor">
+              <div class="color help__box-image">
+                <img src="./image/help.png" alt="" width="270" height="230" />
+              </div>
+              <div class="color help__card-info">
+                <h4 class="help__title">Помощь и поддержка</h4>
+                <p class="help__text">Если в&nbsp;процессе обучения возникнут сложности, вы&nbsp;всегда сможете задать вопрос своему наставнику.</p>
+                <p class="help__text">
+                  Раз в&nbsp;несколько уроков вы&nbsp;будете получать большое задание, которое нужно будет сдавать на&nbsp;проверку код-ревьюеру. Он&nbsp;внимательно изучит ваш код, найдет ошибки
+                  и&nbsp;поможет вам стать лучше.
+                </p>
+              </div>
+            </div>
+
+            <div class="help__infor help__infor--reverse">
+              <div class="color help__box-image">
+                <img src="./image/help2.png" alt="" width="270" height="230" />
+              </div>
+              <div class="color help__card-info">
+                <h4 class="help__title">Работаем на результат</h4>
+                <p class="help__text">
+                  Мы&nbsp;не&nbsp;ограничиваем время общения со&nbsp;студентами, как это делают другие курсы. Если у&nbsp;вас возникнут сложности с&nbsp;пониманием материала или написанием кода,
+                  то&nbsp;наставник и&nbsp;код-ревьюер помогут вам разобраться до&nbsp;конца, и&nbsp;неважно, сколько времени это у&nbsp;них займёт. Наша цель&nbsp;&mdash; дать вам полный комплект
+                  навыков, необходимых для трудоустройства.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="price-background" id="price">
+        <div class="wrapper">
+          <div class="price">
+            <div class="tuition-fees">
+              <h2 class="title">Стоимость обучения</h2>
+              <ul class="price__list">
+                <li class="price__item">
+                  <img src="./image/price-icons1.svg" alt="" width="60" height="60" />
+                  <p class="price__description">Весь курс разбит на&nbsp;несколько блоков. Оплата поэтапная вы&nbsp;платите только за&nbsp;тот блок, который сейчас проходите.</p>
+                </li>
+
+                <li class="price__item">
+                  <img src="./image/price-icons2.svg" alt="" width="60" height="60" />
+                  <p class="price__description">Любой из&nbsp;блоков вы&nbsp;можете оплатить в&nbsp;рассрочку</p>
+                </li>
+
+                <li class="price__item">
+                  <img src="./image/price-icons3.svg" alt="" width="60" height="60" />
+                  <p class="price__description">Если передумаете учиться, то&nbsp;возврат можно оформить в&nbsp;любой момент. Возвращаем деньги за&nbsp;3&nbsp;рабочих дня.</p>
+                </li>
+              </ul>
+            </div>
+           <div class="swipe-table">
+              <svg  width="20" height="30" viewBox="0 0 20 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="1.5" y="1.5" width="16.7143" height="27" rx="3.5" fill="#F9F8FD" stroke="#C4C4C4" stroke-width="3" />
+                <rect x="6" y="1" width="8" height="4" rx="2" fill="#C4C4C4" />
+              </svg>
+              <svg width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 7C0.447715 7 0 7.44772 0 8C0 8.55228 0.447715 9 1 9V7ZM22.7071 8.70711C23.0976 8.31658 23.0976 7.68342 22.7071 7.29289L16.3431 0.928932C15.9526 0.538408 15.3195 0.538408 14.9289 0.928932C14.5384 1.31946 14.5384 1.95262 14.9289 2.34315L20.5858 8L14.9289 13.6569C14.5384 14.0474 14.5384 14.6805 14.9289 15.0711C15.3195 15.4616 15.9526 15.4616 16.3431 15.0711L22.7071 8.70711ZM1 9H22V7H1V9Z" fill="#C4C4C4" />
+              </svg>
+           </div>
+            <div class="info-price">
+              <table class="price__table table">
+                <thead>
+                  <tr class="price__row price-headers">
+                    <th class="price__cell table__text">Блок</th>
+                    <th class="price__cell table__info">Стоимость (₽)</th>
+                    <th class="price__cell table__info">Расчётное время обучения (мес.)</th>
+                  </tr>
+                </thead>
+                <tbody class="price__body">
+                  <tr class="price__row table__row">
+                    <td class="price__cell table__text">Введение в программирование</td>
+                    <td class="price__cell table__info">Бесплатно</td>
+                    <td class="price__cell table__info">0.5</td>
+                  </tr>
+                  <tr class="price__row table__row">
+                    <td class="price__cell table__text">Основы программирования на Python</td>
+                    <td class="price__cell table__info">9 900</td>
+                    <td class="price__cell table__info">1.5</td>
+                  </tr>
+                  <tr class="price__row table__row">
+                    <td class="price__cell table__text">Python, продвинутый уровень</td>
+                    <td class="price__cell table__info">14 900</td>
+                    <td class="price__cell table__info">2.5</td>
+                  </tr>
+                  <tr class="price__row table__row">
+                    <td class="price__cell table__text">Сети + фреймворк Flask</td>
+                    <td class="price__cell table__info">14 900</td>
+                    <td class="price__cell table__info">2.5</td>
+                  </tr>
+                  <tr class="price__row table__row">
+                    <td class="price__cell table__text">Базы данных</td>
+                    <td class="price__cell table__info">14 900</td>
+                    <td class="price__cell table__info">2</td>
+                  </tr>
+                  <tr class="price__row table__row">
+                    <td class="price__cell table__text">Фреймворк Django</td>
+                    <td class="price__cell table__info">14 900</td>
+                    <td class="price__cell table__info">2</td>
+                  </tr>
+                  <tr class="price__row table__row">
+                    <td class="price__cell table__text">Разработка «боевого» проекта</td>
+                    <td class="price__cell table__info">9 900</td>
+                    <td class="price__cell table__info">1</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr class="price__row table__total">
+                    <td class="price__cell table__text">Итого</td>
+                    <td class="price__cell table__info">79 400</td>
+                    <td class="price__cell table__info">12</td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+
+          <div class="course-information">
+            <img src="./image/course-information__icon4.svg" alt="" />
+            <p class="course-information__text">
+              Все блоки проходятся строго по порядку. Пропустить какой-то блок или начать обучение с середины нельзя, даже если вы считаете, что уже знаете какую-то часть материала. Только так мы
+              можем гарантировать, что вы получите все знания, предусмотренные учебной программой.
+            </p>
+
+            <a class="course-information__link button-link button-link--second" href="#!">Начать обучение
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="red" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M0.292893 13.2929C-0.0976311 13.6834 -0.0976311 14.3166 0.292893 14.7071C0.683418 15.0976 1.31658 15.0976 1.70711 14.7071L0.292893 13.2929ZM15 0.999969C15 0.447684 14.5523 -3.1092e-05 14 -3.13449e-05L5 -3.05441e-05C4.44772 -3.08813e-05 4 0.447685 4 0.999969C4 1.55225 4.44772 1.99997 5 1.99997L13 1.99997L13 9.99997C13 10.5523 13.4477 11 14 11C14.5523 11 15 10.5523 15 9.99997L15 0.999969ZM1.70711 14.7071L14.7071 1.70708L13.2929 0.292862L0.292893 13.2929L1.70711 14.7071Z"
+                  fill="white" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrapper">
+        <div class="footer-content">
+          <div class="footer-content__social-info">
+            <div class="footer__logo">
+              <img src="./image/footer__logo.png" alt="" width="88" height="32" />
+              <span
+                >Школа <br />
+                программирования</span
+              >
+            </div>
+
+            <ul class="social-network">
+              <li class="social-network__item">
+                <a href="#">
+                  <svg class="social-network__icon" width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_38_3293)">
+                      <path
+                        d="M34.8884 17.4371C34.8884 27.0673 27.0814 34.8741 17.4512 34.8741C7.82101 34.8741 0.0141602 27.0673 0.0141602 17.4371C0.0141602 7.80683 7.82101 0 17.4512 0C27.0814 0 34.8884 7.80683 34.8884 17.4371Z"
+                        fill="#22253B" />
+                      <path
+                        d="M21.4009 8.68652H13.2122C10.5471 8.68652 8.37891 10.8547 8.37891 13.5198V21.7086C8.37891 24.3736 10.5471 26.5418 13.2122 26.5418H21.4011C24.0659 26.5418 26.2341 24.3736 26.2341 21.7086V13.5198C26.2341 10.8547 24.0659 8.68652 21.4009 8.68652ZM17.3065 22.4963C14.6145 22.4963 12.4244 20.3062 12.4244 17.6141C12.4244 14.9221 14.6145 12.732 17.3065 12.732C19.9986 12.732 22.1888 14.9221 22.1888 17.6141C22.1888 20.3062 19.9986 22.4963 17.3065 22.4963ZM22.3054 13.8834C21.5099 13.8834 20.8628 13.2363 20.8628 12.4407C20.8628 11.6452 21.5099 10.998 22.3054 10.998C23.101 10.998 23.7481 11.6452 23.7481 12.4407C23.7481 13.2363 23.101 13.8834 22.3054 13.8834Z"
+                        fill="white" />
+                      <path
+                        d="M17.3066 13.7788C15.1918 13.7788 13.4712 15.4993 13.4712 17.6142C13.4712 19.7289 15.1918 21.4496 17.3066 21.4496C19.4215 21.4496 21.1419 19.7289 21.1419 17.6142C21.1419 15.4993 19.4215 13.7788 17.3066 13.7788Z"
+                        fill="white" />
+                      <path
+                        d="M22.3055 12.0449C22.0873 12.0449 21.9097 12.2226 21.9097 12.4408C21.9097 12.659 22.0873 12.8367 22.3055 12.8367C22.5238 12.8367 22.7016 12.6592 22.7016 12.4408C22.7016 12.2224 22.5238 12.0449 22.3055 12.0449Z"
+                        fill="white" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_38_3293">
+                        <rect width="35" height="35" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="social-network__item">
+                <a href="#">
+                  <svg class="social-network__icon" width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_88_794)">
+                      <path
+                        d="M34.8741 17.4371C34.8741 27.0673 27.0673 34.8741 17.4371 34.8741C7.80683 34.8741 0 27.0673 0 17.4371C0 7.80683 7.80683 0 17.4371 0C27.0673 0 34.8741 7.80683 34.8741 17.4371Z"
+                        fill="#22253B" />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M16.8496 22.9578H17.9649C17.9649 22.9578 18.3018 22.921 18.4738 22.7359C18.6322 22.5662 18.6271 22.2473 18.6271 22.2473C18.6271 22.2473 18.6053 20.7548 19.2999 20.5349C19.9846 20.3185 20.8639 21.9776 21.7959 22.6154C22.5005 23.0982 23.036 22.9924 23.036 22.9924L25.528 22.9578C25.528 22.9578 26.8314 22.8777 26.2133 21.8555C26.1628 21.7718 25.8535 21.0994 24.3607 19.7174C22.7982 18.271 23.0074 18.505 24.8896 16.0031C26.0359 14.4794 26.4941 13.5492 26.3509 13.1508C26.2143 12.7713 25.3713 12.8716 25.3713 12.8716L22.5657 12.889C22.5657 12.889 22.3577 12.8607 22.2034 12.9527C22.0527 13.0429 21.9556 13.2531 21.9556 13.2531C21.9556 13.2531 21.5116 14.4322 20.9193 15.4349C19.67 17.5508 19.1705 17.6624 18.9663 17.5311C18.4913 17.2249 18.6099 16.301 18.6099 15.6446C18.6099 13.5941 18.9217 12.7392 18.0027 12.5179C17.6977 12.4444 17.4733 12.3959 16.6933 12.388C15.6922 12.3777 14.8448 12.3911 14.365 12.6255C14.0459 12.7814 13.7997 13.1288 13.9496 13.1487C14.1351 13.1735 14.555 13.2617 14.7777 13.5641C15.0652 13.9542 15.0551 14.8303 15.0551 14.8303C15.0551 14.8303 15.2203 17.2441 14.6693 17.5439C14.2911 17.7496 13.7723 17.3297 12.6585 15.4101C12.0878 14.4268 11.6569 13.34 11.6569 13.34C11.6569 13.34 11.5738 13.1369 11.4256 13.0282C11.2457 12.8966 10.9944 12.8547 10.9944 12.8547L8.32829 12.8721C8.32829 12.8721 7.92805 12.8832 7.78113 13.0568C7.65042 13.2111 7.77075 13.5305 7.77075 13.5305C7.77075 13.5305 9.85805 18.4009 12.2215 20.8554C14.3886 23.1056 16.8496 22.9578 16.8496 22.9578Z"
+                        fill="white" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_88_794">
+                        <rect width="35" height="35" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="social-network__item">
+                <a href="#">
+                  <svg class="social-network__icon" width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_88_733)">
+                      <path
+                        d="M34.8884 17.4371C34.8884 27.0673 27.0814 34.8741 17.4512 34.8741C7.82101 34.8741 0.0141602 27.0673 0.0141602 17.4371C0.0141602 7.80683 7.82101 0 17.4512 0C27.0814 0 34.8884 7.80683 34.8884 17.4371Z"
+                        fill="#22253B" />
+                      <path
+                        d="M19.2198 12.9132H21.2457V9.97339H18.8641V9.98399C15.9784 10.0844 15.3869 11.6778 15.3348 13.3514H15.3288V14.8194H13.3638V17.6985H15.3288V25.4158H18.2903V17.6985H20.7163L21.1848 14.8194H18.2912V13.9325C18.2912 13.3669 18.6744 12.9132 19.2198 12.9132Z"
+                        fill="white" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_88_733">
+                        <rect width="35" height="35" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="social-network__item">
+                <a href="#">
+                  <svg class="social-network__icon" width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_88_737)">
+                      <path
+                        d="M34.9403 17.4632C34.9403 27.1078 27.1217 34.9262 17.4771 34.9262C7.83244 34.9262 0.013916 27.1078 0.013916 17.4632C0.013916 7.81852 7.83244 0 17.4771 0C27.1217 0 34.9403 7.81852 34.9403 17.4632Z"
+                        fill="#22253B" />
+                      <path
+                        d="M26.4733 11.6699C25.7638 10.8265 24.4539 10.4825 21.9523 10.4825H12.8719C10.3131 10.4825 8.98107 10.8487 8.27429 11.7466C7.5852 12.622 7.58521 13.9119 7.58521 15.6971V19.0998C7.58521 22.5584 8.4028 24.3143 12.8719 24.3143H21.9523C24.1217 24.3143 25.3238 24.0108 26.1015 23.2665C26.899 22.5032 27.2393 21.2571 27.2393 19.0998V15.6971C27.2393 13.8145 27.1859 12.517 26.4733 11.6699ZM20.2031 17.8682L16.0797 20.0232C15.9876 20.0714 15.8867 20.0953 15.7861 20.0953C15.6721 20.0953 15.5583 20.0647 15.4576 20.0036C15.2679 19.8887 15.1521 19.6831 15.1521 19.4613V15.1651C15.1521 14.9437 15.2676 14.7383 15.4569 14.6233C15.6463 14.5083 15.8818 14.5004 16.0783 14.6025L20.2017 16.7436C20.4115 16.8525 20.5432 17.0691 20.5436 17.3054C20.5438 17.5419 20.4127 17.7588 20.2031 17.8682Z"
+                        fill="white" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_88_737">
+                        <rect width="35" height="35" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="">
+            <nav>
+              <ul class="footer__menu text-link-footer">
+                <li class="footer__item"><a class="footer__navigation link" href="#">Чему вы научитесь</a></li>
+                <li class="footer__item"><a class="footer__navigation link" href="#">Процесс обучения</a></li>
+                <li class="footer__item"><a class="footer__navigation link" href="#">Стоимость</a></li>
+                <li class="footer__item"><a class="footer__navigation link" href="#">Контакты</a></li>
+                <li class="footer__item"><a class="footer__navigation link" href="#">Регистрация</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="communication">
+            <nav>
+              <ul class="communication__menu text-link-footer">
+                <li><a class="communication__link communication__link--phone" href="tel:+74994041601">+7 (499) 348 93 96</a></li>
+                <li><a class="communication__link link" href="mailto:info@ytyt.ru">info@ytyt.ru</a></li>
+              </ul>
+            </nav>
+
+            <div class="communication__info text-link-footer">
+              <p>ИП Умаров Т. А.</p>
+              <p>ИНН 745216229809</p>
+              <p>ОГРНИП 315745200001358</p>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>© 2024 ytyt — Все права защищены</p>
+          <ul class="copyright__info">
+            <li>
+              <a class="copyright__link" href="#">Пользовательское соглашение</a>
+            </li>
+            <li>
+              <a class="copyright__link" href="#">Политика конфиденциальности</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

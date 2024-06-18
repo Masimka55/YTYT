@@ -1,0 +1,130 @@
+.start-block {
+  margin-bottom: 30px;
+  position: relative;
+  padding: 30px 0;
+
+&::after {
+  content: "";
+  background-image: url(../image/start-image.jpg);
+  background-color: #a316ca; 
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  position: absolute;
+  top: -200px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+}
+
+}
+.hero {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    color: var(--color-white);
+   @include tablet {
+     flex-direction: column;
+    
+   }
+  &__content {
+    
+    max-width: 638px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    @include tablet{
+     justify-content: center;
+     align-items: center;
+      text-align: center;
+    }
+  }
+  &__title {
+    color: currentColor;
+    font-weight: 500;
+    margin-bottom: 31px;
+    text-align: left;
+    @include tablet{
+        margin-bottom: 18px;
+       text-align: center;
+    }
+}
+.line{
+    border: 1px solid #dedede;
+width: clamp(18.688rem, 15.776rem + 9.706vw, 22.813rem);
+height: 0px;
+margin-bottom: 14px;
+@include tablet{
+    margin-bottom: 9px;
+    
+}
+}
+
+&__text{
+    margin-bottom: 19px;
+    max-width: 365px;
+}
+@include mobile{
+  &__link{
+    margin-bottom: 30px;
+  }
+}
+
+&__block-image{
+    margin-right: 9px;
+  @include mobile{
+    max-width: 210px;
+  }
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+   
+  }
+}
+}
+.cactom {
+    font-weight: 600;
+    &::before {
+      content: "{";
+      color: #f15525;
+    }
+    &::after{
+        content: "}";
+        color: #f15525;
+    }
+  }
+
+  .box-down{
+    text-align: center;
+   
+  
+  
+  &__down {
+    display: inline-block; 
+    transition: transform 0.3s ease;
+    padding-top: 10px;
+    background-color: #fff;
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    &:hover{
+      animation: moveUpDown 0.5s ease-in-out infinite alternate;
+    }
+  }
+  @keyframes moveUpDown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+}
+
+
+
+
