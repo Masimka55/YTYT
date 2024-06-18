@@ -668,54 +668,54 @@ body {
   padding-right: 10px;
 }
 
-.help {
+.learning-support {
   background-color: #FFF;
   border-radius: 80px;
   padding: 60px 0;
 }
-.help__infor {
+.learning-support__infor {
   display: flex;
   gap: 30px;
 }
-.help__infor--reverse {
+.learning-support__infor--reverse {
   flex-direction: row-reverse;
 }
 @media (max-width: 1023px) {
-  .help__infor {
+  .learning-support__infor {
     flex-direction: column;
     gap: 15px;
   }
 }
-.help__infor:not(:last-of-type) {
+.learning-support__infor:not(:last-of-type) {
   margin-bottom: 30px;
 }
-.help__box-image {
+.learning-support__box-image {
   padding: 41px 65px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 @media (max-width: 767px) {
-  .help__box-image {
+  .learning-support__box-image {
     padding: 20px;
   }
 }
 @media (max-width: 767px) {
-  .help__box-image img {
+  .learning-support__box-image img {
     width: 205px;
     height: 175px;
   }
 }
-.help__card-info {
+.learning-support__card-info {
   padding: 60px 90px 64px 100px;
   text-align: left;
 }
 @media (max-width: 767px) {
-  .help__card-info {
+  .learning-support__card-info {
     padding: 38px 23px;
   }
 }
-.help__title {
+.learning-support__title {
   font-weight: 600;
   font-size: 32px;
   line-height: 0.94;
@@ -723,20 +723,20 @@ body {
   margin-bottom: 18px;
 }
 @media (max-width: 767px) {
-  .help__title {
+  .learning-support__title {
     font-size: 20px;
   }
 }
-.help__text {
+.learning-support__text {
   line-height: 1.6;
 }
 @media (max-width: 767px) {
-  .help__text {
+  .learning-support__text {
     font-size: 12px;
     line-height: 1.42;
   }
 }
-.help__text:first-of-type {
+.learning-support__text:first-of-type {
   margin-bottom: 15px;
 }
 
@@ -752,6 +752,39 @@ body {
 .tuition-fees {
   margin-bottom: 41px;
 }
+.tuition-fees__list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6%;
+}
+@media (max-width: 767px) {
+  .tuition-fees__list {
+    grid-template-columns: 1fr;
+  }
+}
+.tuition-fees__item {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+@media (max-width: 1023px) {
+  .tuition-fees__item {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+}
+.tuition-fees__description {
+  max-width: 80%;
+}
+@media (max-width: 767px) {
+  .tuition-fees__description {
+    font-size: 12px;
+    line-height: 17px;
+    text-align: center;
+  }
+}
 
 .info-price {
   overflow-x: hidden;
@@ -765,39 +798,6 @@ body {
 
 .price {
   margin-bottom: 60px;
-}
-.price__list {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 6%;
-}
-@media (max-width: 767px) {
-  .price__list {
-    grid-template-columns: 1fr;
-  }
-}
-.price__item {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
-@media (max-width: 1023px) {
-  .price__item {
-    flex-direction: column;
-    text-align: center;
-    gap: 15px;
-  }
-}
-.price__description {
-  max-width: 80%;
-}
-@media (max-width: 767px) {
-  .price__description {
-    font-size: 12px;
-    line-height: 17px;
-    text-align: center;
-  }
 }
 .price__table {
   width: 100%;

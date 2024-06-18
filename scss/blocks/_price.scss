@@ -4,6 +4,35 @@
 }
 .tuition-fees{
   margin-bottom: 41px;
+
+  &__list{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6%;
+ 
+    @include mobile{
+          grid-template-columns:  1fr;
+    }
+}
+&__item{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  @include tablet{
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+}
+&__description{
+    max-width: 80%;
+    @include mobile{
+        font-size: 12px;
+    line-height: 17px;
+    text-align: center;
+    }
+}
 }
 .info-price{
   overflow-x: hidden;
@@ -12,39 +41,10 @@
         overflow-x: scroll;
   }
 }
+
 .price{
 margin-bottom: 60px;
-    &__list{
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 6%;
-     
-        @include mobile{
-              grid-template-columns:  1fr;
-        }
-    }
-    &__item{
-      display: flex;
-      align-items: center;
-      gap: 30px;
-      @include tablet{
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-      }
-    }
-    &__description{
-        max-width: 80%;
-        @include mobile{
-            font-size: 12px;
-        line-height: 17px;
-        text-align: center;
-        }
-    }
-
-
-  &__table {
+    &__table {
     width: 100%;
     padding: 38px 42px;
     background-color: #fff;
