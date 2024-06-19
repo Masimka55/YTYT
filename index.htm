@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="./css/reset.css" />
     <title>YTYT</title>
   </head>
 
@@ -62,14 +61,14 @@
               <li class="mobile-menu__item"><a class="mobile-menu__link link" href="#!">Регистрация</a></li>
             </ul>
 
-            <button class="header__auth-item mobile-menu__link--width">
+            <div class="header__auth-item mobile-menu__link--width">
               <a class="header__login-button" href="#!">
                 <svg width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M4.77588 0.429688L8.71157 4.36551L4.77588 8.30132" stroke="white" />
                   <path d="M8.73218 4.36731H0.151367" stroke="white" />
                 </svg>
                 Войти</a>
-            </button>
+            </div>
           </div>
         </div>
       </div>
@@ -140,57 +139,58 @@
             <h2 class="title">Обучение в YtYt – это удобно и результативно</h2>
           </div>
 
-          <div class="our-advantage__cards">
-            <article class="our-advantage__card advantage-card">
+          <ul class="our-advantage__cards">
+            <li class="our-advantage__card advantage-card">
               <img class="advantage-card__icons" src="./image/cards1.svg" alt="" />
               <h3 class="advantage-card__title">Огромное количество практики</h3>
               <p class="advantage-card__description">Более 500 самостоятельных заданий и&nbsp;20&nbsp;полноценных больших проектов</p>
-            </article>
+            </li>
 
-            <article class="our-advantage__card advantage-card">
+            <li class="our-advantage__card advantage-card">
               <img class="advantage-card__icons" src="./image/cards2.svg" alt="" />
               <h3 class="advantage-card__title">Современные методики обучения</h3>
               <p class="advantage-card__description">Спиральное обучение: погружаемся в&nbsp;материал постепенно, виток за&nbsp;витком</p>
-            </article>
+            </li>
 
-            <article class="our-advantage__card advantage-card">
+            <li class="our-advantage__card advantage-card">
               <img class="advantage-card__icons" src="./image/cards3.svg" alt="" />
               <h3 class="advantage-card__title">Простое и понятное изложение</h3>
               <p class="advantage-card__description">Вместо заумных терминов&nbsp;&mdash; примеры из&nbsp;реального мира</p>
-            </article>
+            </li>
 
-            <article class="our-advantage__card advantage-card">
+            <li class="our-advantage__card advantage-card">
               <img class="advantage-card__icons" src="./image/cards4.svg" alt="" />
               <h3 class="advantage-card__title">Гибкий график занятий</h3>
               <p class="advantage-card__description">Учитесь в&nbsp;любое время в&nbsp;удобном для вас темпе</p>
-            </article>
+            </li>
 
-            <article class="our-advantage__card advantage-card">
+            <li class="our-advantage__card advantage-card">
               <img class="advantage-card__icons" src="./image/cards5.svg" alt="" />
               <h3 class="advantage-card__title">Прямая связь с опытными программистами</h3>
               <p class="advantage-card__description">Задавайте вопросы и&nbsp;отправляйте свой код на&nbsp;проверку</p>
-            </article>
+            </li>
 
-            <article class="our-advantage__card advantage-card">
+            <li class="our-advantage__card advantage-card">
               <img class="advantage-card__icons" src="./image/cards6.svg" alt="" />
               <h3 class="advantage-card__title">Оплата небольшими частями</h3>
               <p class="advantage-card__description">Платите только за&nbsp;тот материал, который сейчас изучаете, а&nbsp;не&nbsp;за&nbsp;весь курс сразу</p>
-            </article>
+            </li>
 
-            <article class="our-advantage__card advantage-card our-advantage__card--big">
+            <li class="our-advantage__card advantage-card our-advantage__card--big">
               <img class="advantage-card__icons" src="./image/cards7.svg" alt="" />
               <h3 class="advantage-card__title">Быстрый и легкий возврат</h3>
               <p class="advantage-card__description">Если передумаете учиться &mdash; вернем деньги за&nbsp;3&nbsp;рабочих дня</p>
-            </article>
-          </div>
+            </li>
+          </ul>
         </div>
       </section>
 
       <section class="learning">
         <div class="wrapper">
-          <div class="">
-            <h2 class="title">Как происходит обучение на YtYt?</h2>
+          <div class="learning__title-box">
+            <h2 class="title learning__title">Как происходит обучение на YtYt?</h2>
           </div>
+
           <div class="learning__info">
             <p class="learning__parag">
               Обучение должно быть комфортным. Поэтому мы&nbsp;разработали собственную платформу для обучения программированию. На&nbsp;ней вы&nbsp;можете не&nbsp;только изучать теорию,
@@ -198,7 +198,7 @@
             </p>
             <video class="learning__video" controls poster="./image/macbook.png">
               <source src="" type="video/mp4" />
-              Ваш браузер не поддерживает элемент <code>video</code>.
+              <code>video</code>.
             </video>
           </div>
 
@@ -271,7 +271,9 @@
         <div class="wrapper">
           <div class="price">
             <div class="price__tuition tuition-fees">
-              <h2 class="title tuition-fees__title">Стоимость обучения</h2>
+              
+                <h2 class="title tuition-fees__title">Стоимость обучения</h2>
+              
               <ul class=" tuition-fees__list">
                 <li class=" tuition-fees__item">
                   <img src="./image/price-icons1.svg" alt="" width="60" height="60" />
@@ -289,6 +291,7 @@
                 </li>
               </ul>
             </div>
+
            <div class="swipe-table">
               <svg  width="20" height="30" viewBox="0 0 20 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="1.5" y="1.5" width="16.7143" height="27" rx="3.5" fill="#F9F8FD" stroke="#C4C4C4" stroke-width="3">
@@ -298,6 +301,7 @@
                 <path d="M1 7C0.447715 7 0 7.44772 0 8C0 8.55228 0.447715 9 1 9V7ZM22.7071 8.70711C23.0976 8.31658 23.0976 7.68342 22.7071 7.29289L16.3431 0.928932C15.9526 0.538408 15.3195 0.538408 14.9289 0.928932C14.5384 1.31946 14.5384 1.95262 14.9289 2.34315L20.5858 8L14.9289 13.6569C14.5384 14.0474 14.5384 14.6805 14.9289 15.0711C15.3195 15.4616 15.9526 15.4616 16.3431 15.0711L22.7071 8.70711ZM1 9H22V7H1V9Z" fill="#C4C4C4" />
               </svg>
            </div>
+
             <div class="info-price">
               <table class="price__table table">
                 <thead>
@@ -374,17 +378,17 @@
       </section>
     </main>
 
-    <footer>
+    <footer class="footer">
       <div class="wrapper">
-        <div class="footer-content">
+        <div class="footer__inner footer-content">
           <div class="footer-content__social-info">
-            <div class="footer__logo">
-              <img src="./image/footer__logo.png" alt="" width="88" height="32" />
+            <div class="footer-content__logo">
+              <img src="./image/footer__logo.png" alt="YTYT" width="88" height="32" />
               <span>Школа <br />
                 программирования</span>
             </div>
 
-            <ul class="social-network">
+            <ul class="footer__social social-network">
               <li class="social-network__item">
                 <a href="#!">
                   <svg class="social-network__icon" width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -474,6 +478,7 @@
               </li>
             </ul>
           </div>
+
           <div class="">
             <nav>
               <ul class="footer__menu text-link-footer">
@@ -486,7 +491,7 @@
             </nav>
           </div>
 
-          <div class="communication">
+          <div class="footer__communication communication">
             <nav>
               <ul class="communication__menu text-link-footer">
                 <li><a class="communication__link communication__link--phone" href="tel:+74994041601">+7 (499) 348 93 96</a></li>
@@ -501,7 +506,7 @@
             </div>
           </div>
         </div>
-        <div class="copyright">
+        <div class="footer__copyright copyright">
           <p>© 2024 ytyt — Все права защищены</p>
           <ul class="copyright__info">
             <li>
@@ -514,6 +519,7 @@
         </div>
       </div>
     </footer>
+
     <script>
       const hamburger = document.querySelector(".burger-button");
       const navMenu = document.querySelector(".mobile-menu");

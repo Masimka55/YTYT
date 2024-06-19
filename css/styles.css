@@ -487,7 +487,7 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 26px;
+  gap: 20px;
 }
 @media (max-width: 480px) {
   .our-advantage__cards {
@@ -499,33 +499,34 @@ body {
   padding: 51px 35px 31px;
   border-radius: 30px;
   text-align: center;
-  width: 270px;
+  width: 23.3%;
 }
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .our-advantage__card {
     padding: 24px 10px 20px;
-    width: 145px;
+    min-width: 145px;
   }
   .our-advantage__card--big {
-    width: 100%;
+    width: 75%;
   }
 }
-.our-advantage .advantage-card__icons {
+
+.advantage-card__icons {
   width: 60px;
   height: 60px;
 }
 @media (max-width: 767px) {
-  .our-advantage .advantage-card__icons {
+  .advantage-card__icons {
     width: 40px;
     height: 40px;
   }
 }
-.our-advantage .advantage-card__title {
+.advantage-card__title {
   margin-top: 19px;
   margin-bottom: 10px;
   font-size: clamp(0.75rem, 0.561rem + 0.606vw, 1rem);
 }
-.our-advantage .advantage-card__description {
+.advantage-card__description {
   font-size: clamp(0.563rem, 0.373rem + 0.606vw, 0.813rem);
 }
 
@@ -919,21 +920,38 @@ body {
   line-height: 1.3;
 }
 
-footer {
+.footer {
   background-color: #F9F8FD;
 }
+.footer__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.footer__navigation {
+  padding: 5px 20px;
+  font-size: 13px;
+}
 
-.footer-content {
+.footer__inner {
   display: grid;
   grid-template-columns: 50% 25% 25%;
   margin-bottom: 47px;
 }
 @media (max-width: 767px) {
-  .footer-content {
+  .footer__inner {
     grid-template-columns: 1fr;
     gap: 43px;
     text-align: center;
   }
+}
+
+.footer-content__logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: #8e8e8e;
+  margin-bottom: 40px;
 }
 .footer-content__social-info {
   display: flex;
@@ -944,23 +962,6 @@ footer {
     justify-content: center;
     align-items: center;
   }
-}
-
-.footer__logo {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  color: #8e8e8e;
-  margin-bottom: 40px;
-}
-.footer__menu {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-.footer__navigation {
-  padding: 5px 20px;
-  font-size: 13px;
 }
 
 .social-network {
@@ -1075,7 +1076,7 @@ footer {
   .burger-button__line {
     width: 100%;
     height: 2px;
-    background: #F15525;
+    background: #f15525;
   }
   .open-mobile-menu {
     position: absolute;
@@ -1088,8 +1089,8 @@ footer {
     text-align: start;
     padding: 53px 34px;
     border-radius: 20px;
-    animation: Open 1s both;
-    background-color: #FFF;
+    animation: openMobileMenu 1s both;
+    background-color: #fff;
     z-index: 3;
     min-height: 500px;
   }
@@ -1109,7 +1110,7 @@ footer {
   .mobileMenu__link--width {
     max-width: 132px;
   }
-  @keyframes Open {
+  @keyframes openMobileMenu {
     0% {
       transform: translateX(300px);
     }

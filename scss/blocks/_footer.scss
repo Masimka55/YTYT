@@ -1,16 +1,33 @@
-footer{
+.footer{
   background-color: #F9F8FD;
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  &__navigation {
+    padding: 5px 20px;
+    font-size: 13px;
+  }
 }
-.footer-content {
+.footer__inner {
   display: grid;
   grid-template-columns: 50% 25% 25%;
-
   margin-bottom: 47px;
 
   @include mobile {
     grid-template-columns: 1fr;
     gap: 43px;
     text-align: center;
+  }
+}
+.footer-content {
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #8e8e8e;
+    margin-bottom: 40px;
   }
   &__social-info {
     display: flex;
@@ -20,25 +37,6 @@ footer{
       justify-content: center;
       align-items: center;
     }
-  }
-}
-.footer {
-  &__logo {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    color: #8e8e8e;
-    margin-bottom: 40px;
-  }
-
-  &__menu {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  &__navigation {
-    padding: 5px 20px;
-    font-size: 13px;
   }
 }
 
